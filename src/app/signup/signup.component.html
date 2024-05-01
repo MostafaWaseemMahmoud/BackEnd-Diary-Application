@@ -1,0 +1,71 @@
+<div class="container">
+  <div class="form-wrapper">
+    <h2>Sign Up</h2>
+    <form [formGroup]="myForm">
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" formControlName="firstName" required />
+        @if (myForm.get('firstName')?.errors?.['required']) {
+        <p style="color: black">
+          <i style="color: red" class="fa-solid fa-bomb"></i> Please Inter Your
+          Name
+        </p>
+
+        } @if (myForm.get('firstName')?.errors?.['minlength']) {
+        <p style="color: black">
+          <i style="color: red" class="fa-solid fa-bomb"></i> Please Enter a
+          Name with at least 3 letters
+        </p>
+        }
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" formControlName="email" required />
+
+        @if (myForm.get('email')?.errors?.['required']) {
+        <p style="color: black">
+          <i style="color: red" class="fa-solid fa-bomb"></i> Please Inter Your
+          Email
+        </p>
+
+        } @if (myForm.get('email')?.errors?.['pattern']) {
+        <p style="color: black">
+          <i style="color: red" class="fa-solid fa-bomb"></i> Please Enter a
+          PLease Inter A Valid Email
+        </p>
+        }
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input
+          type="password"
+          id="password"
+          formControlName="password"
+          required
+        />
+        @if (myForm.get('password')?.errors?.['required']) {
+        <p style="color: black">
+          <i style="color: red" class="fa-solid fa-bomb"></i> Please Inter Your
+          Email
+        </p>
+
+        } @if (myForm.get('password')?.errors?.['pattern']) {
+        <p style="color: black">
+          <i style="color: red" class="fa-solid fa-bomb"></i>Please Inter
+          Pasword With (YouName(anyNumberIfyouWant).)
+        </p>
+        }
+      </div>
+      <div class="form-group">
+        <button type="button" (click)="onSubmit()" [disabled]="myForm.invalid">
+          Sign Up
+        </button>
+        @if (signupRes == 'User already exists') {
+        <p style="color: red">This User is alreadyExist</p>
+        }@else if(signupRes == 'succsess'){
+        <p style="color: lightgreen">Data Sent To Server</p>
+        }
+      </div>
+    </form>
+  </div>
+</div>

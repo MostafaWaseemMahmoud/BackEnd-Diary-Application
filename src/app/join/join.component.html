@@ -1,0 +1,11 @@
+<div class="join">
+  <div class="content">
+    <button (click)="logedIn = true; choosen = true">Login</button>
+    <button (click)="logedIn = false; choosen = true">SignUp</button>
+    @if (choosen) { @if (logedIn) {
+    <app-login></app-login>
+    }@else {
+    <app-signup></app-signup>
+    } }
+  </div>
+</div>

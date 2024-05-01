@@ -1,0 +1,28 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  justify-items: center;
+  padding: 40px;
+  color: var(--danger-color);
+  .nav {
+    color: var(--danger-color);
+    right: 20;
+    ul {
+      align-items: center;
+
+      color: var(--danger-color);
+      li {
+        display: inline-flex;
+        margin-right: 20px;
+        a {
+          font-weight: bold;
+          color: var(--danger-color);
+          font-size: 20px;
+          text-decoration: none;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}

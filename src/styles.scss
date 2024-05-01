@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+:root {
+  --primary-color: #007bff;
+  /* Primary color (e.g., for buttons, links) */
+  --secondary-color: #6c757d;
+  /* Secondary color (e.g., for secondary buttons, borders) */
+  --success-color: #28a745;
+  /* Success color (e.g., for success messages) */
+  --danger-color: #ff2740;
+  /* Danger color (e.g., for error messages) */
+  --warning-color: #ff6a07;
+  /* Warning color (e.g., for warnings) */
+  --info-color: #17a2b8;
+  /* Info color (e.g., for informational messages) */
+  --light-color: #f8f9fa;
+  /* Light color (e.g., for background) */
+  --dark-color: #171a1c;
+  /* Dark color (e.g., for text) */
+}
+
+* {
+  font-family: "Open Sans", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
